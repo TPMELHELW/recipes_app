@@ -5,7 +5,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:recipes_app/features/authentication/screens/login_screen/login_screen.dart';
 import 'package:recipes_app/features/authentication/screens/on_boarding_screen/on_boarding_screen.dart';
 import 'package:recipes_app/features/authentication/screens/signup_screen/verify_screen.dart';
-import 'package:recipes_app/features/recipes/view/home_screen/screen/home_screen.dart';
+import 'package:recipes_app/features/recipes/view/navigation_menu_screen/navigation_menu_screen.dart';
 import 'package:recipes_app/utils/exception/firebase_auth_exceptions.dart';
 import 'package:recipes_app/utils/function/snack_bar.dart';
 
@@ -14,20 +14,20 @@ class AuthRepository extends GetxController {
   AuthRepository(this._auth);
 
   static AuthRepository get instance => Get.find();
-  final storage = GetStorage();
+  final _storage = GetStorage();
 
   void screenRedirect() {
     if (_auth.currentUser != null) {
       if (_auth.currentUser?.emailVerified ?? false) {
-        Get.offAll(() => const HomeScreen());
+        Get.offAll(() => const NavigationMenuScreen());
       } else {
         Get.offAll(() => VerifyScreen(
               email: _auth.currentUser!.email!,
             ));
       }
     } else {
-      storage.writeIfNull("isFirstTime", true);
-      storage.read("isFirstTime")
+      _storage.writeIfNull("isFirstTime", true);
+      _storage.read("isFirstTime")
           ? Get.offAll(() => const OnBoardingScreen())
           : Get.offAll(() => const LoginScreen());
     }
@@ -65,6 +65,11 @@ class AuthRepository extends GetxController {
       showSnackbar(error.dialogTitle, error.dialogText);
       throw Exception(e);
     }
+  }
+
+  Future<void> signOut() async {
+    await _auth.signOut();
+    screenRedirect();
   }
 
   @override

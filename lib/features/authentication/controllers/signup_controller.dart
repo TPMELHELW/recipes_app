@@ -49,18 +49,6 @@ class SignUpController extends GetxController {
   }
 
   @override
-  void onClose() {
-    firstName.dispose();
-    lastName.dispose();
-    email.dispose();
-    password.dispose();
-    phone.dispose();
-    userName.dispose();
-    phone.dispose();
-    super.onClose();
-  }
-
-  @override
   void onInit() {
     firstName = TextEditingController();
     lastName = TextEditingController();
