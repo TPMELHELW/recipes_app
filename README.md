@@ -1,16 +1,27 @@
-# recipes_app
 
-A new Flutter project.
+## Screenshots
 
-## Getting Started
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_8_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_7_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_6_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_5_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_4_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_3_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_2_2024-05-03_12-06-46.jpg)
+![Alt text](https://github.com/TPMELHELW/recipes_app/blob/main/assets/images/photo_1_2024-05-03_12-06-46.jpg)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Checklist
+
+- [x] Implemented the feature according to the requirements.
+- [x] Auhtentication
+- [x] First screen recipes view
+- [x] Second screen (DetailScreen)
+- [x] Using Getx
+- [x] Using offline Db in the Favourite section
+- [x] Some Unit Test
+- [x] Flutter Native Splash
+- [x] App Icon
+
